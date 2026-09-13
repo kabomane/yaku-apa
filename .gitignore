@@ -1,0 +1,11 @@
+node_modules/
+.env
+.env.*
+!.env.example
+coverage/
+.cache/
+dist/
+*.tmp
+output/*
+!output/.gitkeep
+!output/README.md

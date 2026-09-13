@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#172421">
+  <meta name="description" content="L'atelier de lecture de Yaku-apa. Parcourir le roman, sa bible et ses plans, et garder ses notes et idées.">
+  <title>Yaku-apa · Atelier de lecture</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./app.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#document">Aller au document</a>
+  <header class="topbar">
+    <a class="brand" href="#file=plan%2Fpremise.md" aria-label="Yaku-apa, ouvrir la prémisse"><span class="brand-mark">Y.</span><span>Yaku-apa<small>ATELIER DE LECTURE</small></span></a>
+    <nav class="top-actions" aria-label="Outils de lecture">
+      <button id="open-library" class="button mobile-library" aria-haspopup="dialog" aria-controls="library-dialog" aria-label="Ouvrir les fichiers"><span data-icon="folder"></span><span>Fichiers</span></button>
+      <button id="open-notes" class="button" aria-controls="notes-panel" aria-label="Ouvrir les notes"><span data-icon="note"></span><span class="optional-label">Carnet</span><span id="total-notes" class="count">0</span></button>
+      <a class="icon-button" href="https://github.com/kabomane/yaku-apa" target="_blank" rel="noopener noreferrer" aria-label="Ouvrir le dépôt GitHub"><span data-icon="github"></span></a>
+    </nav>
+  </header>
+  <div class="workspace">
+    <div id="library-slot" class="library-slot">
+      <aside id="library-panel" class="library-panel" aria-label="Fichiers du projet">
+        <div class="panel-title"><h2>Bibliothèque</h2><button class="icon-button dialog-close" data-close="library-dialog" aria-label="Fermer les fichiers"><span data-icon="close"></span></button></div>
+        <label class="search"><span data-icon="search"></span><input id="file-search" type="search" placeholder="Trouver un fichier…" aria-label="Rechercher un fichier" autocomplete="off"></label>
+        <div class="tree-toolbar"><span id="file-count">Chargement…</span><button id="collapse-tree" class="text-button">Tout replier</button></div>
+        <nav id="file-tree" class="file-tree" aria-label="Arborescence"></nav>
+        <div class="library-footer"><span class="eyebrow">LE PROJET</span><p>Un roman, toutes ses pièces.</p><small id="revision">Version publiée</small></div>
+      </aside>
+    </div>
+    <main id="reading" class="reading">
+      <div class="reader-toolbar">
+        <div id="breadcrumb" class="breadcrumb">Yaku-apa</div>
+        <div class="reader-settings" aria-label="Présentation du texte">
+          <button id="font-smaller" class="icon-button" aria-label="Réduire le texte">A−</button>
+          <button id="font-larger" class="icon-button" aria-label="Agrandir le texte">A+</button>
+          <button id="theme-toggle" class="icon-button" aria-label="Activer le thème sombre"><span data-icon="moon"></span></button>
+        </div>
+      </div>
+      <div class="document-wrap">
+        <div class="document-meta"><span id="document-kind" class="eyebrow">LECTURE</span><span id="reading-time"></span></div>
+        <div id="frontmatter" class="frontmatter" hidden></div>
+        <article id="document" class="markdown" tabindex="-1" aria-label="Document"><p class="loading">Ouverture de la bibliothèque…</p></article>
+        <footer class="document-footer"><span id="document-path"></span><a id="source-link" target="_blank" rel="noopener noreferrer">Voir sur GitHub <span aria-hidden="true">↗</span></a></footer>
+      </div>
+      <div id="read-progress" class="read-progress" aria-hidden="true"></div>
+    </main>
+    <div id="notes-slot" class="notes-slot">
+      <aside id="notes-panel" class="notes-panel" aria-label="Carnet de notes">
+        <div class="panel-title"><h2>Le carnet <span class="tiny-accent">✳</span></h2><button class="icon-button dialog-close" data-close="notes-dialog" aria-label="Fermer le carnet"><span data-icon="close"></span></button></div>
+        <p class="panel-intro">Les idées viennent en lisant.</p>
+        <div class="local-label"><span data-icon="device"></span>Sur cet appareil uniquement</div>
+        <form id="note-form">
+          <div class="form-top"><label for="note-kind">Nouvelle entrée</label><select id="note-kind" aria-label="Type de note"><option value="idea">Idée</option><option value="note">Note</option></select></div>
+          <p id="note-file" class="note-file">Choisir un document</p>
+          <label class="sr-only" for="note-text">Votre note ou idée</label>
+          <textarea id="note-text" placeholder="Une piste, une réplique, quelque chose à revoir…" rows="5" maxlength="10000" required></textarea>
+          <div class="form-actions"><button id="cancel-edit" class="text-button" type="button" hidden>Annuler</button><button id="save-note" class="primary-button" type="submit">Enregistrer <span aria-hidden="true">↗</span></button></div>
+        </form>
+        <div class="notes-filter"><label for="note-scope">Mes entrées</label><select id="note-scope"><option value="file">Ce document</option><option value="all">Tout le projet</option></select></div>
+        <div id="notes-list" class="notes-list"></div>
+        <button id="export-notes" class="button export-button"><span data-icon="download"></span>Exporter mon carnet</button>
+        <p class="storage-help">Vos notes restent dans ce navigateur. Exportez-les pour en garder une copie.</p>
+      </aside>
+    </div>
+  </div>
+  <dialog id="library-dialog" class="panel-dialog"><div class="dialog-mount"></div></dialog>
+  <dialog id="notes-dialog" class="panel-dialog notes-dialog"><div class="dialog-mount"></div></dialog>
+  <div id="notification" class="notification" role="status" aria-live="polite" hidden></div>
+  <noscript><p>Activez JavaScript pour parcourir les documents et utiliser les notes locales.</p></noscript>
+</body>
+</html>

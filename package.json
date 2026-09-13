@@ -1,0 +1,28 @@
+{
+  "name": "yaku-apa",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Atelier narratif local Yaku-apa, piloté dans Codex",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "doctor": "node scripts/doctor.js",
+    "count": "node scripts/word_count.js",
+    "validate": "node scripts/validate_continuity.js",
+    "status": "node scripts/project_status.js",
+    "build": "node scripts/build_manuscript.js",
+    "test": "node --test",
+    "reader:build": "node scripts/build_reader.js",
+    "reader:serve": "node scripts/serve_reader.js"
+  },
+  "dependencies": {
+    "dompurify": "^3.4.15",
+    "marked": "^18.0.13"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "jsdom": "^29.1.1"
+  }
+}
