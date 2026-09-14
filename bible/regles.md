@@ -65,11 +65,11 @@ Le ton du projet repose sur la combinaison :
 - action ;
 - school-life / vie quotidienne.
 
-## R12 — Arrivées décalées
+## R12 — Arrivées avant la rentrée
 
 Les protagonistes n'arrivent pas tous au Japon dans une introduction unique.
 
-Les débuts doivent permettre des arrivées / introductions séparées et l'utilisation de flashbacks.
+Les quatre arrivent pendant la semaine précédant la rentrée, à des moments éventuellement différents. Les débuts doivent permettre des introductions séparées et l'utilisation de flashbacks.
 
 ## R13 — Arcs connus
 
@@ -81,7 +81,7 @@ Les axes narratifs déjà retenus comprennent :
 - dilemmes moraux ;
 - révélation de l'identité du Lotus ;
 - rivalités de factions ;
-- progression vers une organisation finalement assumée.
+- progression vers une organisation assumée pendant l'intrigue, puis dénouement de ce statut avant la fin.
 
 L'ordre détaillé et la forme précise restent dans le plan.
 
@@ -94,3 +94,19 @@ Tout élément non défini doit rester `TODO`, `PROPOSITION` ou `PROVISOIRE` jus
 Une décision humaine explicite et plus récente peut modifier ces règles.
 
 Toute modification doit être documentée et répercutée dans les fichiers concernés.
+
+## R16 — Format et durée
+
+Yaku-apa est un **light novel en trois tomes**. L'histoire principale se déroule sur **une année**. Les dates exactes, la durée précise des vacances et le nombre de chapitres restent à définir.
+
+## R17 — Fonctions des trois tomes
+
+- **Tome 1 — rentrée et cours** : les quatre protagonistes arrivent au Japon pendant la semaine précédant la rentrée, se préparent, l'univers prend forme et le récit se poursuit pendant leurs cours.
+- **Tome 2 — vacances** : ils sont traqués pendant leurs vacances. Thème directeur : **« Objectif : survivre »**.
+- **Tome 3 — fin des études** : le récit suit la fin de leurs études et la résolution des conflits.
+
+La répartition précise des arcs et des chapitres entre les tomes reste à fixer.
+
+## R18 — Fin du séjour et état final
+
+À la fin de leur visa d'études au Japon, les quatre rentrent chacun chez soi, dans des avions distincts. Ils sont médusés : tristes de se séparer, mais apaisés, car ils ne sont plus traqués ni considérés comme des yakuzas. Les modalités de la résolution restent à définir ; aucun agent ne doit inventer une cause, une scène ou un dialogue pour l'expliquer.

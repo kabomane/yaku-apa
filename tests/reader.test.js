@@ -16,14 +16,12 @@ test('Markdown : titres, tableaux, listes et liens internes rendus', () => {
   window.close();
 });
 
-test('Markdown et fichiers sources ne peuvent pas exécuter de script', () => {
+test('Markdown ne peut pas exécuter de script ; autres extensions refusées', () => {
   const { window } = new JSDOM('');
   const { wrapper } = renderDocument(window, '<script>alert(1)</script><img src=x onerror=alert(1)><a href="javascript:alert(1)">X</a><form><input></form><style>body{display:none}</style>', 'README.md', new Set());
   assert.equal(wrapper.querySelectorAll('script,style,form,input,[onerror]').length, 0);
   assert.equal(wrapper.querySelector('a').getAttribute('href'), null);
-  const source = renderDocument(window, '<img src=x onerror=alert(1)>', 'test.js', new Set());
-  assert.equal(source.wrapper.querySelectorAll('img').length, 0);
-  assert.match(source.wrapper.textContent, /onerror/);
+  assert.throws(() => renderDocument(window, '<img src=x onerror=alert(1)>', 'test.js', new Set()), /uniquement/);
   window.close();
 });
 

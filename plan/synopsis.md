@@ -1,12 +1,20 @@
 # Synopsis — Yaku-apa
 
-> Synopsis de travail. Les transitions, causes précises et fins de plusieurs arcs restent à définir.
+> Synopsis de travail d'un light novel en trois tomes sur une année. Les transitions, causes précises et fins de plusieurs arcs restent à définir.
+
+## Repères par tome
+
+- **Tome 1** : les quatre arrivent dans la semaine précédant la rentrée. Ils se préparent, l'univers prend forme et le récit se déroule pendant les cours.
+- **Tome 2** : les vacances sont marquées par leur traque. Son thème directeur est « Objectif : survivre ».
+- **Tome 3** : les études se terminent et les conflits se résolvent. À la fin du visa d'études, les quatre rentrent chez eux séparément.
+
+La place exacte de l'incident fondateur, de la création de l'organisation et des autres arcs dans cette structure reste à décider.
 
 ## Ouverture
 
 Les quatre protagonistes ne sont pas introduits comme un groupe déjà constitué.
 
-Le manga commence par des introductions séparées et/ou des chapitres centrés sur leurs situations respectives. Leurs arrivées au Japon sont décalées et peuvent être complétées par des flashbacks.
+Le light novel commence par des introductions séparées centrées sur les situations respectives des protagonistes. Tous arrivent au Japon pendant la semaine précédant la rentrée, pas nécessairement le même jour. Des flashbacks peuvent compléter ces introductions.
 
 Ils sont tous étudiants étrangers dans une école de langue japonaise.
 
@@ -68,7 +76,7 @@ Le groupe doit apprendre à gérer :
 
 ## Vie parallèle
 
-Le manga continue à faire exister :
+Le light novel continue à faire exister :
 - l'école ;
 - les cours ;
 - les baito ;
@@ -108,6 +116,8 @@ Factions, enjeux et ordre : TODO
 
 ## Direction finale connue
 
-Le récit doit aller vers une situation où l'organisation, d'abord née par accident et nécessité, devient **assumée**.
+L'organisation, d'abord née par accident et nécessité, devient **assumée** pendant l'intrigue. La manière dont les protagonistes cessent ensuite d'être traqués et considérés comme des yakuzas reste à concevoir.
 
-La forme exacte de cette acceptation, le climax et la résolution finale restent à écrire.
+Le tome 3 aboutit à la fin de leurs études et à la résolution des conflits. À la fin de leur visa d'études au Japon, chacun rentre chez soi dans un avion distinct. Tous sont médusés : tristes de se séparer, mais apaisés parce qu'ils ne sont plus traqués ni considérés comme des yakuzas.
+
+Le climax, les mécanismes de résolution et la mise en scène précise restent TODO.

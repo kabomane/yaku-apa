@@ -1,6 +1,6 @@
 # Yaku-apa
 
-Atelier de roman piloté dans Codex : comédie noire, action et vie étudiante au Japon. La prémisse est dans [plan/premise.md](plan/premise.md), les règles canoniques dans [bible/regles.md](bible/regles.md).
+Atelier de light novel en trois tomes, piloté dans Codex : comédie noire, action et vie étudiante au Japon sur une année. La prémisse est dans [plan/premise.md](plan/premise.md), les règles canoniques dans [bible/regles.md](bible/regles.md).
 
 Le socle technique est opérationnel. Le découpage, les choix narratifs encore marqués TODO et la rédaction restent à faire.
 
@@ -74,6 +74,6 @@ npm.cmd run reader:build
 npm.cmd run reader:serve
 ```
 
-L'aperçu s'ouvre sur http://127.0.0.1:4173. Chaque push sur `main` reconstruit et déploie le lecteur via `.github/workflows/pages.yml`. L'arborescence contient les fichiers texte versionnés du dépôt et les dossiers vides ; les fichiers générés et ignorés sont exclus. Les fichiers sont embarqués dans le site : aucun jeton ni appel à l'API GitHub n'est nécessaire pendant la lecture.
+L'aperçu s'ouvre sur http://127.0.0.1:4173. Chaque push sur `main` reconstruit et déploie le lecteur via `.github/workflows/pages.yml`. L'arborescence et la lecture contiennent uniquement les fichiers `.md` du dépôt et leurs dossiers parents. Les fichiers sont embarqués dans le site : aucun jeton ni appel à l'API GitHub n'est nécessaire pendant la lecture.
 
 Sur mobile, fichiers et carnet s'ouvrent en panneaux modaux. Champs de saisie à 16 px minimum, cibles tactiles adaptées, zones sûres et hauteur dynamique pour iOS/Android. `touch-action: manipulation` évite le zoom au double toucher ; le zoom volontaire par pincement reste disponible. Voir [docs/reader.md](docs/reader.md).

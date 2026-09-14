@@ -2,9 +2,9 @@
 
 ## Architecture
 
-`reader/` contient HTML, CSS et JavaScript. `npm run reader:build` regroupe le code avec esbuild dans `dist/` et produit `content.json` depuis les fichiers Git. Les sources textuelles sont sélectionnées par extension et les fichiers ignorés/secrets `.env` sont exclus. Les dossiers vides restent visibles grâce aux `.gitkeep`. Aucun appel GitHub côté navigateur : la version publiée correspond au dernier déploiement réussi.
+`reader/` contient HTML, CSS et JavaScript. `npm run reader:build` regroupe le code avec esbuild dans `dist/` et produit `content.json` depuis les seuls fichiers `.md` du dépôt. L'arborescence montre uniquement les dossiers qui contiennent des documents Markdown. Aucun appel GitHub côté navigateur : la version publiée correspond au dernier déploiement réussi.
 
-Le rendu Markdown GFM passe par Marked puis DOMPurify. Les sources non Markdown sont affichées comme texte. Les liens relatifs vers les documents disponibles restent dans le lecteur ; liens HTTP externes dans un nouvel onglet. Les tableaux et blocs de code défilent horizontalement sans élargir la page.
+Le rendu Markdown GFM passe par Marked puis DOMPurify. Les liens relatifs vers les documents `.md` disponibles restent dans le lecteur ; liens HTTP externes dans un nouvel onglet. Les tableaux et blocs de code défilent horizontalement sans élargir la page.
 
 Les chemins et ancres sont conservés dans le fragment URL, ce qui permet retour/précédent et ouverture directe sous `/yaku-apa/`, sans routage serveur. Les dernières préférences de lecture sont locales.
 
@@ -12,7 +12,7 @@ Les chemins et ancres sont conservés dans le fragment URL, ce qui permet retour
 
 Chaque note est un objet `{id,file,kind,text,createdAt,updatedAt}`. `kind` vaut `idea` ou `note`. Une clé `yaku-apa:notes:v1:<id>` par entrée évite d'écraser les autres notes lors d'écritures sur plusieurs onglets. L'événement storage actualise la liste entre onglets. Deux modifications simultanées d'une même entrée suivent la dernière écriture.
 
-Ajout, modification, suppression avec annulation et export JSON sont disponibles. Les brouillons sont conservés localement séparément des notes enregistrées. Un stockage indisponible ou saturé produit un message d'échec et conserve le texte dans le champ. Les notes ne sont ni publiques ni synchronisées. Une note reste dans « Tout le projet » même si son fichier a été retiré.
+Ajout, modification, suppression avec annulation et export JSON sont disponibles. Les brouillons sont conservés localement séparément des notes enregistrées. Un stockage indisponible ou saturé produit un message d'échec et conserve le texte dans le champ. Les notes ne sont ni publiques ni synchronisées. Les notes d'anciens fichiers retirés du lecteur restent stockées et incluses dans l'export, mais ne figurent plus dans le carnet visible.
 
 ## Responsive et tactile
 

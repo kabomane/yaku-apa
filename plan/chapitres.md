@@ -1,13 +1,21 @@
 # Plan des chapitres — Yaku-apa
 
-> Aucun découpage définitif n'est encore fixé. Ne pas attribuer automatiquement un nombre de chapitres aux phases.
+> Light novel en trois tomes sur une année. Aucun découpage définitif n'est encore fixé. Ne pas attribuer automatiquement un nombre de chapitres ou un tome aux blocs A–G.
+
+## Cadre des tomes — CANON
+
+- **Tome 1** : semaine avant la rentrée, préparation, installation de l'univers et période des cours.
+- **Tome 2** : vacances ; les quatre sont traqués. Thème : « Objectif : survivre ».
+- **Tome 3** : fin des études, résolution des conflits, fin du visa d'études et départ séparé de chacun par avion. Leur émotion mêle stupeur, tristesse de la séparation et apaisement lié à la fin de la traque et de leur réputation de yakuzas.
+
+Tomes exacts des blocs narratifs, nombre de chapitres et scènes : TODO.
 
 ## Structure connue
 
 ### Bloc A — Introductions séparées
 Objectif :
 - présenter les quatre protagonistes progressivement ;
-- montrer que leurs arrivées au Japon sont décalées ;
+- montrer leurs arrivées distinctes pendant la semaine précédant la rentrée ;
 - permettre des flashbacks d'arrivée ;
 - installer l'école et la vie quotidienne.
 
@@ -63,11 +71,14 @@ Chapitres : TODO
 
 Chapitres : TODO
 
-### Bloc H — Final
+### Bloc H — Dénouement du tome 3
 Objectif :
-- organisation assumée ;
-- climax ;
-- résolution des arcs.
+- terminer les études et résoudre les conflits ;
+- clore la traque et leur réputation de yakuzas ;
+- conduire à la fin du visa d'études et au retour séparé des quatre ;
+- préserver la tristesse de leur séparation et l'apaisement final.
+
+Climax et modalités de résolution : TODO
 
 Chapitres : TODO
 

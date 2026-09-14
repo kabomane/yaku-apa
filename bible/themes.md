@@ -16,6 +16,12 @@ Vie scolaire et quotidienne d'un côté, criminalité organisée de l'autre.
 ### Conséquences
 Un événement accidentel produit des conséquences de plus en plus difficiles à fuir.
 
+### Survie pendant les vacances
+Le tome 2 a pour thème directeur « Objectif : survivre » : les quatre protagonistes y sont traqués.
+
+### Séparation et apaisement
+Leur retour séparé au pays clôt le récit sur une tristesse liée à la séparation et un apaisement lié à la fin de la traque et de leur réputation de yakuzas.
+
 ### Identité et secret
 Le Lotus se fait passer pour un homme, créant une ligne narrative liée à l'identité, au secret et à la confiance.
 

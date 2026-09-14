@@ -14,20 +14,14 @@ export function resolveDocumentLink(href, currentFile) {
   } catch { return null; }
 }
 export function renderDocument(window, content, file, available) {
+  if (!file.endsWith('.md')) throw new Error('Le lecteur accepte uniquement les documents Markdown.');
   const wrapper = window.document.createElement('div');
   let metadata = '';
-  if (file.endsWith('.md')) {
-    const normalized = content.replace(/^\uFEFF/, '').replace(/\r\n/g, '\n');
-    const match = normalized.match(/^---\n([\s\S]*?)\n---(?:\n|$)/);
-    metadata = match?.[1] ?? '';
-    const html = marked.parse(match ? normalized.slice(match[0].length) : normalized, { gfm: true });
-    wrapper.innerHTML = createDOMPurify(window).sanitize(html, { USE_PROFILES: { html: true }, FORBID_TAGS: ['style', 'form', 'input', 'textarea', 'select', 'button'], FORBID_ATTR: ['style', 'srcset'] });
-  } else {
-    const pre = window.document.createElement('pre');
-    const code = window.document.createElement('code');
-    code.textContent = content;
-    pre.append(code); wrapper.append(pre);
-  }
+  const normalized = content.replace(/^\uFEFF/, '').replace(/\r\n/g, '\n');
+  const match = normalized.match(/^---\n([\s\S]*?)\n---(?:\n|$)/);
+  metadata = match?.[1] ?? '';
+  const html = marked.parse(match ? normalized.slice(match[0].length) : normalized, { gfm: true });
+  wrapper.innerHTML = createDOMPurify(window).sanitize(html, { USE_PROFILES: { html: true }, FORBID_TAGS: ['style', 'form', 'input', 'textarea', 'select', 'button'], FORBID_ATTR: ['style', 'srcset'] });
   const used = new Set();
   for (const heading of wrapper.querySelectorAll('h1,h2,h3,h4,h5,h6')) {
     const slug = heading.textContent.toLowerCase().trim().replace(/[^\p{L}\p{N}\s_-]/gu, '').replace(/\s/g, '-');

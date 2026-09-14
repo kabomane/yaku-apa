@@ -20,9 +20,9 @@ Ils créent une organisation d'abord par nécessité.
 À mesure que la structure devient réelle, ils doivent décider jusqu'où ils sont prêts à aller.
 
 ### État final connu
-L'organisation est finalement **assumée**.
+L'organisation a été assumée pendant l'intrigue. Au terme des études et des conflits, les quatre ne sont plus traqués ni considérés comme des yakuzas. À la fin de leur visa d'études, ils rentrent chacun chez eux par un avion distinct, médusés, tristes de se séparer et apaisés.
 
-La signification exacte de cette acceptation reste TODO.
+La signification exacte de cette acceptation temporaire et la façon dont leur statut prend fin restent TODO.
 
 ---
 

@@ -159,10 +159,10 @@ $('#note-text').addEventListener('input', rememberDraft); $('#note-kind').addEve
 $('#cancel-edit').addEventListener('click', () => { clearEditDraft(); resetEdit(); loadDraft(); updateNoteFile(); });
 function updateNoteFile() { $('#note-file').textContent = editing ? `Modification · ${editing.file}` : current?.path ?? 'Choisir un document'; }
 function renderNotes() {
-  $('#total-notes').textContent = notes.length;
+  $('#total-notes').textContent = notes.filter(note => available.has(note.file)).length;
   $('#export-notes').disabled = !notes.length;
   const list = $('#notes-list'); list.replaceChildren();
-  const visible = notes.filter(note => $('#note-scope').value === 'all' || note.file === current?.path);
+  const visible = notes.filter(note => available.has(note.file) && ($('#note-scope').value === 'all' || note.file === current?.path));
   if (!visible.length) {
     const empty = document.createElement('div'); empty.className = 'empty-notes';
     const title = document.createElement('span'); title.textContent = 'Une page à remplir.';
@@ -229,7 +229,7 @@ function openDocument() {
     $('#breadcrumb').textContent = file.path.replaceAll('/', ' / ');
     $('#document-path').textContent = file.path;
     $('#source-link').href = `https://github.com/kabomane/yaku-apa/blob/main/${file.path.split('/').map(encodeURIComponent).join('/')}`;
-    $('#document-kind').textContent = file.path.startsWith('chapters/') ? 'LE ROMAN' : file.kind === 'markdown' ? 'LES DOCUMENTS' : 'LES SOURCES';
+    $('#document-kind').textContent = file.path.startsWith('chapters/') ? 'LE ROMAN' : 'LES DOCUMENTS';
     const words = $('#document').textContent.trim().split(/\s+/).length;
     $('#reading-time').textContent = `${Math.max(1, Math.ceil(words / 220))} min de lecture`;
     document.title = `${$('#document h1')?.textContent ?? file.path.split('/').pop()} · Yaku-apa`;
@@ -247,10 +247,12 @@ try {
   const response = await fetch('./content.json');
   if (!response.ok) throw new Error('Chargement impossible');
   manifest = await response.json();
-  if (!Array.isArray(manifest.files) || !Array.isArray(manifest.folders)) throw new Error('Index invalide');
+  if (!Array.isArray(manifest.files) || !Array.isArray(manifest.folders) || manifest.files.some(file => !file.path?.endsWith('.md'))) throw new Error('Index invalide');
   manifest.files.forEach(file => available.add(file.path));
   $('#revision').textContent = `Édition ${manifest.revision}`;
-  if (!location.hash && !available.has(preferences.file)) preferences.file = manifest.files[0]?.path;
+  const previousFile = new URLSearchParams(location.hash.slice(1)).get('file');
+  if (previousFile && !previousFile.endsWith('.md')) history.replaceState(null, '', route('plan/premise.md'));
+  if (!location.hash && !available.has(preferences.file)) preferences.file = available.has('plan/premise.md') ? 'plan/premise.md' : manifest.files[0]?.path;
   if (!location.hash) history.replaceState(null, '', route(preferences.file));
   tree(); openDocument(); renderNotes();
   if (document.modelContext?.registerTool) {

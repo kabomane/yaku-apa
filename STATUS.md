@@ -2,11 +2,11 @@
 
 Phase : préparation narrative  
 Version du socle : 0.1.0  
-Dernière mise à jour humaine : 2026-09-13
+Dernière mise à jour humaine : 2026-09-14
 
 ## Éléments validés
 
-Bible, plan et règles éditoriales importés du starter. Outillage Node.js ajouté. Aucun chapitre rédigé ou validé. Les TODO du starter restent ouverts.
+Bible, plan et règles éditoriales importés du starter. Structure du light novel fixée à trois tomes sur une année, avec trajectoire et fin générale documentées dans DEC-001. Aucun chapitre rédigé ou validé.
 
 ## Travail en cours
 
@@ -15,6 +15,8 @@ Préparation des décisions nécessaires au premier chapitre, avant rédaction.
 ## Décisions en attente
 
 - Découpage définitif et nombre de chapitres : plan/chapitres.md.
+- Placement précis des arcs fondateurs et intermédiaires dans les tomes ; dates et durée des vacances.
+- Modalités de la traque, du dénouement et de la fin de leur statut de yakuzas.
 - Objectifs personnels initiaux : plan/premise.md.
 - Moment de la révélation du Lotus : bible/regles.md, règle R02.
 - Autres champs TODO : à examiner avant les scènes concernées.
